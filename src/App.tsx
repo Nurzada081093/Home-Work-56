@@ -1,10 +1,35 @@
 import './App.css';
+import {useState} from 'react';
 
-const App = () => (
-    <div className='home-work'>
-      <p style={{color: 'green', width: '300px', fontSize: '20px'}}>I'm starting my home work #56!</p>
-      <div style={{fontSize: '30px'}}>^_^</div>
-    </div>
-);
+const App = () => {
+    const [totalPrice, setTotalPrise] = useState(30);
+
+
+    return (
+        <div className="container">
+            <div className="card">
+                <div className="cutout">Ingredients</div>
+                <div className="text">
+                    <div className="ingredients-block">
+
+                    </div>
+                </div>
+            </div>
+            <div className="card">
+                <div className="cutout">Burger</div>
+                <div className="text">
+                    <div className="Burger">
+                        <div className="BreadTop">
+                            <div className="Seeds1"></div>
+                            <div className="Seeds2"></div>
+                        </div>
+                        <div className="BreadBottom"></div>
+                    </div>
+                    <div className="price">Price: <b>{totalPrice}</b></div>
+                </div>
+            </div>
+        </div>
+    );
+};
 
 export default App;
