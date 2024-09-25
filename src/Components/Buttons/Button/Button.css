@@ -1,0 +1,33 @@
+.ingredient-img {
+    width: 70px;
+    height: 70px;
+}
+
+.button-block {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    border: 1px solid gray;
+    margin: 20px auto;
+    width: 400px;
+    font-size: 20px;
+    padding: 5px 10px;
+    border-radius: 10px;
+}
+
+.button-ingredient {
+    background-color: transparent;
+    border: none;
+    cursor: pointer;
+}
+
+.remove-button {
+    border: none;
+    background-color: transparent;
+    cursor: pointer;
+}
+
+.remove-img {
+    width: 20px;
+    height: 20px;
+}

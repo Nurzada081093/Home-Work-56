@@ -1,6 +1,6 @@
 .container {
     width: 1000px;
-    margin: 50px auto;
+    margin: 20px auto;
     display: flex;
     flex-wrap: wrap;
     justify-content: space-between;
@@ -34,14 +34,17 @@
 }
 
 .text {
-    margin-top: 50px;
     position: relative;
     z-index: 2;
-    margin-left: 20px;
+}
+
+.burger-content {
+    margin-top: 70px;
 }
 
 .ingredients-block {
-    border: 1px solid green;
+    border: 1px solid transparent;
+    width: 350px;
 }
 
 .BreadBottom {
