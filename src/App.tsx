@@ -2,12 +2,13 @@ import './App.css';
 import {useState} from 'react';
 import Buttons from './Components/Buttons/Buttons';
 import {IIngredients} from './types';
+import IngredientAdd from './Components/AddIngredient/IngredientAdd';
 
 const App = () => {
     const [ingredients, setIngredients] = useState<IIngredients[]>([
         {id: 1, name: 'Meat', count: 0},
-        {id: 2, name: 'Cheese', count: 0},
-        {id: 3, name: 'Salad', count: 0},
+        {id: 2, name: 'Salad', count: 0},
+        {id: 3, name: 'Cheese', count: 0},
         {id: 4, name: 'Bacon', count: 0},
     ]);
 
@@ -50,10 +51,10 @@ const App = () => {
                             <div className="Seeds1"></div>
                             <div className="Seeds2"></div>
                         </div>
-                        {}
+                        <IngredientAdd ingredients={ingredients}/>
                         <div className="BreadBottom"></div>
                     </div>
-                    <div className="price">Price: <b>{totalPrice}</b></div>
+                    <div className="price">Price: <b>{totalPrice} $</b></div>
                 </div>
             </div>
         </div>

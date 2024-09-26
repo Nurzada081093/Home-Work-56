@@ -19,11 +19,11 @@ const Buttons: React.FC<IProps>= ({ingredient, ingredientCount, addIngredient, r
                     </button>
                 </div>
                 <div>{ingredient.name}</div>
-                <div>x{ingredientCount}</div>
+                <div>x {ingredientCount}</div>
                 <div>
-                    <button type="button" className="remove-button" onClick={removeIngredient}>
+                    {ingredientCount ? <button type="button" className="remove-button" onClick={removeIngredient}>
                         <img className="remove-img" src="https://img.icons8.com/ios-filled/50/delete.png" alt="delete"/>
-                    </button>
+                    </button> : null}
                 </div>
             </div>
         </>

@@ -15,7 +15,7 @@ const Buttons: React.FC<IProps> = ({ ingredients, addIngredient, removeIngredien
         <>
             {INGREDIENTS.map((ingredient) => {
 
-                const ingredientCount = ingredients.reduce((acc, countIngredient) => {
+                const ingredientCount: number = ingredients.reduce((acc, countIngredient) => {
                     return countIngredient.id === ingredient.id ? countIngredient.count : acc;
                 }, 0);
 
