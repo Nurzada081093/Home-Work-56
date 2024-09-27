@@ -12,7 +12,7 @@ const App = () => {
         {id: 4, name: 'Bacon', count: 0, price: 60},
     ]);
 
-    const [totalPrice, setTotalPrise] = useState(30);
+    const [totalPrice, setTotalPrise] = useState<number>(30);
 
     const addIngredient = (id: number) => {
         const index:number = ingredients.findIndex((ingredient) => ingredient.id === id);
@@ -27,7 +27,13 @@ const App = () => {
             return {...ingredient};
         });
 
+        const totalNewPrice = copyIngredients.reduce((acc, ingredient) => {
+            acc += ingredient.count * ingredient.price;
+            return acc;
+        }, 30);
+
         setIngredients(copyIngredients);
+        setTotalPrise(totalNewPrice);
     };
 
 
@@ -44,6 +50,12 @@ const App = () => {
             return {...ingredient};
         });
 
+        const totalNewPrice = copyIngredients.reduce((acc, ingredient) => {
+            acc += ingredient.count * ingredient.price;
+            return acc;
+        }, 30);
+
+        setTotalPrise(totalNewPrice);
         setIngredients(copyIngredients);
     };
 

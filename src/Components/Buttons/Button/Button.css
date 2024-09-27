@@ -13,6 +13,7 @@
     font-size: 20px;
     padding: 5px 10px;
     border-radius: 10px;
+    background-color: white;
 }
 
 .button-ingredient {
@@ -27,6 +28,10 @@
 .ingredient-name {
     font-size: 20px;
     margin-left: 70px;
+}
+
+.ingredient-name:hover {
+    font-size: 23px;
 }
 
 .remove-button {

@@ -1,18 +1,25 @@
+body {
+    background: url("https://i.pinimg.com/564x/c4/9b/92/c49b929aa471e872269655001403b5b5.jpg") no-repeat center fixed;
+    background-size: cover;
+}
+
 .container {
     width: 1000px;
-    margin: 20px auto;
+    margin: 40px auto;
     display: flex;
     flex-wrap: wrap;
     justify-content: space-between;
     gap: 20px;
     padding: 20px;
     border: 1px solid transparent;
+    background-color: rgba(233, 237, 228, 0.73);
+    border-radius: 10px;
 }
 
 .card {
     position: relative;
     padding: 20px 40px;
-    background: white;
+    background: transparent;
     border: 2px solid black;
     border-radius: 10px;
     width: 400px;
@@ -22,15 +29,15 @@
     position: absolute;
     top: 0.1%;
     left: 20px;
-    height: 40px;
-    background: white;
+    height: 30px;
+    background: rgb(179, 179, 177);
     transform: translateY(-50%);
     z-index: 1;
     font-size: 20px;
     text-transform: uppercase;
     text-align: center;
-    padding: 15px 10px 0 10px;
-
+    padding: 10px 8px 0 8px;
+    border-radius: 10px;
 }
 
 .text {
