@@ -16,9 +16,9 @@ const Buttons: React.FC<IProps>= ({ingredient, ingredientCount, addIngredient, r
                 <div>
                     <button type="button" className="button-ingredient" onClick={addIngredient}>
                         <img className="ingredient-img" src={ingredient.image} alt={ingredient.name}/>
+                        <div className="ingredient-name">{ingredient.name}</div>
                     </button>
                 </div>
-                <div>{ingredient.name}</div>
                 <div>x {ingredientCount}</div>
                 <div>
                     {ingredientCount ? <button type="button" className="remove-button" onClick={removeIngredient}>

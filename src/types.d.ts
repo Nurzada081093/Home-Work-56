@@ -2,6 +2,7 @@
     name: string;
     count: number;
     id: number;
+    price: number;
 }
 
  export interface Ingredient {

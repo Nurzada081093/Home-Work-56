@@ -1,21 +1,21 @@
 import './App.css';
 import {useState} from 'react';
 import Buttons from './Components/Buttons/Buttons';
+import Ingredient from './Components/Ingredient/Ingredient';
 import {IIngredients} from './types';
-import IngredientAdd from './Components/AddIngredient/IngredientAdd';
 
 const App = () => {
     const [ingredients, setIngredients] = useState<IIngredients[]>([
-        {id: 1, name: 'Meat', count: 0},
-        {id: 2, name: 'Salad', count: 0},
-        {id: 3, name: 'Cheese', count: 0},
-        {id: 4, name: 'Bacon', count: 0},
+        {id: 1, name: 'Meat', count: 0, price: 80},
+        {id: 2, name: 'Salad', count: 0, price: 10},
+        {id: 3, name: 'Cheese', count: 0, price: 50},
+        {id: 4, name: 'Bacon', count: 0, price: 60},
     ]);
 
     const [totalPrice, setTotalPrise] = useState(30);
 
     const addIngredient = (id: number) => {
-        const index = ingredients.findIndex((ingredient) => ingredient.id === id);
+        const index:number = ingredients.findIndex((ingredient) => ingredient.id === id);
 
         const copyIngredients = ingredients.map((ingredient, i) => {
             if (i === index) {
@@ -31,7 +31,21 @@ const App = () => {
     };
 
 
-    const removeIngredient = () => {};
+    const removeIngredient = (id: number) => {
+        const index:number = ingredients.findIndex((ingredient) => ingredient.id === id);
+
+        const copyIngredients = ingredients.map((ingredient, i) => {
+            if (i === index) {
+                return {
+                    ...ingredient,
+                    count: ingredient.count - 1,
+                };
+            }
+            return {...ingredient};
+        });
+
+        setIngredients(copyIngredients);
+    };
 
     return (
         <div className="container">
@@ -51,7 +65,7 @@ const App = () => {
                             <div className="Seeds1"></div>
                             <div className="Seeds2"></div>
                         </div>
-                        <IngredientAdd ingredients={ingredients}/>
+                        <Ingredient ingredients={ingredients}/>
                         <div className="BreadBottom"></div>
                     </div>
                     <div className="price">Price: <b>{totalPrice} $</b></div>

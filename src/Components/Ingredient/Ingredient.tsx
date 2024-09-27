@@ -10,7 +10,7 @@ interface IPropsArray {
     name: string;
 }
 
-const IngredientAdd: React.FC<IProps>= ({ingredients}) => {
+const Ingredient: React.FC<IProps>= ({ingredients}) => {
 
     const ingredientsArray: IPropsArray[] = [];
     ingredients.forEach((ingredient:IIngredients) => {
@@ -22,16 +22,14 @@ const IngredientAdd: React.FC<IProps>= ({ingredients}) => {
     });
 
     return (
-        <div>
+        <>
             {ingredientsArray.length > 0 ? (
                 ingredientsArray.map((ingredient) => (
-                    <div key={ingredient.id} className={ingredient.name}>
-                        <p style={{color: 'transparent', padding: '0', margin: '0'}}>{ingredient.name}</p>
-                    </div>
+                    <div key={ingredient.id} className={ingredient.name}></div>
                 ))
             ) : null}
-        </div>
+        </>
     );
 };
 
-export default IngredientAdd;
+export default Ingredient;

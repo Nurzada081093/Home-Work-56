@@ -19,6 +19,14 @@
     background-color: transparent;
     border: none;
     cursor: pointer;
+    display: flex;
+    width: 200px;
+    align-items: center;
+}
+
+.ingredient-name {
+    font-size: 20px;
+    margin-left: 70px;
 }
 
 .remove-button {
